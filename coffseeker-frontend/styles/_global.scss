@@ -1,0 +1,797 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Style+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700;800;900&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  box-sizing: border-box;
+  // outline: 1px red solid;
+}
+
+nextjs-portal {
+  display: none;
+}
+
+// 全域字形
+body {
+  font-family: 'Noto Sans','Noto Sans TC', 'Noto Sans TC Regular',Helvetica, Arial,
+    'PingFang TC', '苹方-繁', 'Heiti TC', '黑體-繁', 'Microsoft JhengHei',
+    '微軟正黑體', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  letter-spacing: $letter-spacing;
+  color: $color__font;
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 235 226 / var(--tw-bg-opacity));
+}
+// 讓footer保持在最底下
+// #main-content {
+//   display: flex;
+//   flex-direction: column;
+//   min-height: 100vh;
+// }
+
+// 背景為深藍色
+.bg-primary-color {
+  background-color: $color--primary;
+}
+// footer日期顏色
+.footer-p-color {
+  color: $color--gray3;
+}
+
+// footer 尺寸
+.ed-resize {
+  max-width: 1600px;
+  @media screen and (max-width: 1440px) {
+    max-width: 1200px;
+    margin-left: 150px;
+  }
+  @media screen and (max-width: $lg) {
+    max-width: 390px;
+    margin-left: 0px;
+  }
+}
+
+// TOP按鈕外框
+.btn-outline-light {
+  color: $color--gray3;
+  border-color: $color--gray3;
+  border-radius: 0;
+}
+// 滾動漸變效果
+header,
+nav {
+  transition: opacity 0.5s;
+  opacity: 1;
+}
+.fade-out {
+  opacity: 0.9;
+}
+
+// 會員按鈕邊界取消
+.ed-icon-user-button {
+  background-color: $color--background;
+  border: none;
+}
+// 物件權限設定
+
+// 強迫取消bootstrap的樣式
+a {
+  text-decoration: none !important;
+}
+a img {
+  vertical-align: bottom;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb {
+  a {
+    color: $color--gray4;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+div {
+  cursor: default;
+}
+
+button {
+  letter-spacing: $letter-spacing;
+}
+
+[list]::-webkit-calendar-picker-indicator {
+  display: none !important;
+}
+
+@mixin heading {
+  font-style: normal;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  letter-spacing: $letter-spacing;
+  // line-height: 2.5rem;
+  color: $color__font;
+}
+
+@mixin text {
+  font-style: normal;
+  font-family: 'Inter', 'Noto Sans TC', sans-serif;
+  letter-spacing: $letter-spacing;
+  line-height: 140%;
+  color: $color__font;
+}
+
+h1 {
+  @include heading;
+  font-weight: 500;
+  font-size: 3.25rem;
+}
+
+h2 {
+  @include heading;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+h3 {
+  @include heading;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+h4 {
+  @include heading;
+  // font-weight: 500;
+  font-size: 1.5rem;
+}
+
+h5 {
+  @include heading;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+h6 {
+  @include heading;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 2rem;
+}
+
+@mixin h1 {
+  @include heading;
+  font-weight: 500;
+  font-size: 3.75rem;
+}
+
+@mixin h2 {
+  @include heading;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+@mixin h3 {
+  @include heading;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+@mixin h4 {
+  @include heading;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+@mixin h5 {
+  @include heading;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@mixin h6 {
+  @include heading;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@mixin text--large {
+  @include text;
+  font-weight: normal;
+  font-size: 1.25rem;
+}
+
+@mixin text--large-bold {
+  @include text;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@mixin text--medium {
+  @include text;
+  font-weight: normal;
+  font-size: 1.125rem;
+}
+
+@mixin text--medium-bold {
+  @include text;
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+
+@mixin text--normal {
+  @include text;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+@mixin text--normal-bold {
+  @include text;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+@mixin text--small {
+  @include text;
+  font-weight: normal;
+  font-size: 0.875rem;
+}
+
+@mixin text--small-bold {
+  @include text;
+  font-weight: 500;
+  font-size: 0.75rem;
+}
+
+@mixin text--extra-small {
+  @include text;
+  font-weight: normal;
+  font-size: 0.75rem;
+}
+
+@mixin text--extra-small-bold {
+  @include text;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+@mixin clear__btn {
+  background: transparent;
+  border: none;
+
+  @include cursor(pointer);
+}
+
+@mixin interaction__link {
+  transition: $transition;
+
+  &:hover {
+    color: $color--hover;
+  }
+
+  &:focus,
+  &:active {
+    color: $color--active;
+  }
+}
+
+@mixin interaction__btn {
+  transition: $transition;
+
+  &:hover {
+    color: $color--light;
+    background: $color--hover;
+
+    i {
+      color: $color--light;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $color--light;
+    background: $color--active;
+
+    i {
+      color: $color--light;
+    }
+  }
+}
+
+@mixin interaction__tab {
+  transition: $transition;
+
+  &:hover {
+    color: $color--primary;
+    background: $color--opacity;
+
+    i {
+      color: $color--primary;
+    }
+  }
+
+  &:focus,
+  &:active {
+    color: $color--primary;
+    background: $color--opacity;
+
+    i {
+      color: $color--primary;
+    }
+  }
+}
+
+@mixin icon--absolute($content) {
+  content: $content;
+  width: max-content;
+  height: max-content;
+
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  font-size: 1.5rem;
+
+  position: absolute;
+}
+
+@mixin cursor($cursor) {
+  cursor: pointer;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  div,
+  label,
+  input {
+    cursor: $cursor;
+  }
+}
+
+@mixin scrollbar {
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $color--gray5;
+    border-radius: 10rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $color--primary;
+    border-radius: 10rem;
+    background-clip: content-box;
+    transition: $transition;
+    &:hover {
+      background: $color--hover;
+    }
+  }
+}
+
+@mixin scrollbar--hidden {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin placeholder__rec($margin) {
+  width: 100%;
+  margin: $margin;
+  border-radius: $border-radius__btn;
+}
+
+@mixin placeholder__text {
+  width: 100%;
+  height: 1.5rem;
+}
+
+@mixin text--truncate($line) {
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  overflow: hidden;
+}
+
+@mixin clear__number-arrow {
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type='number'] {
+    -moz-appearance: textfield;
+  }
+}
+
+.ellipsis {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; //行數
+  -webkit-box-orient: vertical;
+  white-space: normal;
+  overflow: hidden;
+
+  &--3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3; //行數
+    -webkit-box-orient: vertical;
+    white-space: normal;
+    overflow: hidden;
+  }
+}
+
+.ed-loading {
+  width: 100vw;
+  height: 100vh;
+
+  background: $color--primary;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1200;
+
+  &__icon {
+    width: 30%;
+    height: 30%;
+    fill: white;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    @media screen and (max-width: $md) {
+      width: 50%;
+      height: 50%;
+    }
+    @media screen and (max-width: $sm) {
+      left: 230px;
+      width: 40%;
+      height: 60%;
+    }
+  }
+}
+
+.ed-icon-special {
+  fill: white;
+  width: 70%;
+  position: absolute;
+  left: 33%;
+  top: 55%;
+  @media screen and (max-width: 1440px) {
+    left: 32%;
+    top: 55%;
+    width: 70%;
+  }
+  @media screen and (max-width: $sm) {
+    left: 45px;
+    top: 480px;
+    width: 200%;
+  }
+}
+
+@keyframes slideInUp {
+  0% {
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideOutDown {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(0, 100%, 0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+  to {
+    transform: translateZ(0);
+  }
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateZ(0);
+  }
+  to {
+    visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes translateX {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(1rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes wobble {
+  0%,
+  85%,
+  100% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  85% {
+    transform: translateX(6px) rotate(-0.6deg);
+  }
+  87.5% {
+    transform: translateX(-6px) rotate(-0.6deg);
+  }
+  90% {
+    transform: translateX(15px) rotate(3.6deg);
+  }
+  92.5% {
+    transform: translateX(-15px) rotate(3.6deg);
+  }
+  95% {
+    transform: translateX(6px) rotate(-0.6deg);
+  }
+  97.5% {
+    transform: translateX(-6px) rotate(-0.6deg);
+  }
+}
+
+#eypENqKG5ne2 {
+  animation: eypENqKG5ne2_c_o 1000ms forwards;
+}
+
+@keyframes eypENqKG5ne2_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+#eypENqKG5ne3 {
+  opacity: 0;
+  animation: eypENqKG5ne3_c_o 1000ms forwards;
+  animation-delay: 500ms;
+}
+@keyframes eypENqKG5ne3_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+#eypENqKG5ne4 {
+  opacity: 0;
+  animation: eypENqKG5ne4_c_o 1000ms forwards;
+  animation-delay: 1000ms;
+}
+@keyframes eypENqKG5ne4_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+#eypENqKG5ne5 {
+  opacity: 0;
+  animation: eypENqKG5ne5_c_o 1000ms forwards;
+  animation-delay: 1500ms;
+}
+@keyframes eypENqKG5ne5_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+#eypENqKG5ne6 {
+  opacity: 0;
+  animation: eypENqKG5ne6_c_o 1000ms forwards;
+  animation-delay: 2000ms;
+}
+@keyframes eypENqKG5ne6_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
+}
+#eypENqKG5ne7 {
+  opacity: 0;
+  animation: eypENqKG5ne7_c_o 1000ms forwards;
+  animation-delay: 2500ms;
+}
+@keyframes eypENqKG5ne7_c_o {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+#eypENqKG5ne1 {
+  animation: eypENqKG5ne1_c_o 6000ms forwards;
+}
+@keyframes eypENqKG5ne1_c_o {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animation {
+  animation-fill-mode: both;
+  animation-timing-function: ease-in-out;
+  &__floating-menu {
+    animation-duration: 0.5s;
+    @media screen and (min-width: $lg) {
+      animation-duration: 0.2s;
+    }
+    &--in {
+      animation-name: slideInUp;
+      @media screen and (min-width: $lg) {
+        animation-name: fadeIn;
+      }
+    }
+    &--out {
+      animation-name: slideOutDown;
+      @media screen and (min-width: $lg) {
+        animation-name: fadeOut;
+      }
+    }
+  }
+  &__floating-chat {
+    animation-duration: 0.2s;
+    &--in {
+      animation-name: fadeIn;
+    }
+    &--out {
+      animation-name: fadeOut;
+    }
+  }
+  &__modal {
+    animation-duration: 0.3s;
+    &--in {
+      animation-name: fadeIn;
+    }
+    &--out {
+      animation-name: fadeOut;
+    }
+  }
+  &__tabs {
+    animation-duration: 0.3s;
+    &--in {
+      animation-name: fadeIn;
+    }
+    &--out {
+      animation-name: fadeOut;
+    }
+  }
+  &__loading {
+    animation-duration: 1s;
+    &--out {
+      animation-delay: 4s;
+      animation-name: fadeOut;
+    }
+  }
+}
+
+.swal2-title {
+  font-size: 20px;
+}
+
+.swal2-popup {
+  border-radius: 0 !important;
+}
+
+#eypENqKG5ne8 {
+  opacity: 0;
+  animation: fadeOutFromLeftToRight 1.5s forwards;
+  animation-delay: 3000ms;
+}
+
+@keyframes fadeOutFromLeftToRight {
+  0% {
+    opacity: 0;
+    clip-path: polygon(0 0, 0% 0, 0% 100%, 0 100%);
+  }
+  100% {
+    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}

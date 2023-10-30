@@ -1,0 +1,104 @@
+.ed-fav-btn {
+  $_: &;
+  background: #dfd0af;
+  border: none;
+
+  position: absolute;
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 100%, 0% 0%, 100% 0%);
+
+  cursor: pointer;
+
+  transition: $transition;
+  &__icon {
+    position: relative;
+    top: 6px;
+    color: white;
+    cursor: pointer;
+  }
+  &__text {
+    margin-left: 0.25rem;
+    @include text--small;
+    @include cursor(pointer);
+  }
+  &--medium {
+    width: 4rem;
+    height: 4rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+
+    #{$_}__icon {
+      font-size: 1.5rem;
+    }
+  }
+  &--large {
+    width: 4rem;
+    height: 4rem;
+    // background: transparent;
+    top: 10px;
+    right: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    @media screen and (max-width: $lg) {
+      right:5px;
+    }
+
+    #{$_}__icon {
+      top: 0px;
+      right: -6px;
+      font-size: 2rem;
+    }
+  }
+  @media screen and (max-width: $md) {
+    width: 3.5rem;
+    height: 3.5rem;
+    // align-items: center;
+
+    #{$_}__icon {
+      font-size: 1.25rem;
+    }
+  }
+  &--icon-text {
+    width: max-content;
+
+    display: flex;
+    align-items: center;
+
+    right: 0.75rem;
+    @media screen and (max-width: $md) {
+      width: max-content;
+      top: 0.5rem;
+      right: 0;
+    }
+  }
+  &.active {
+    #{$_}__icon {
+      color: $color--error;
+      box-shadow: none;
+      &::before {
+      }
+    }
+  }
+}
+
+.swal2-confirm {
+  border-radius: 0 !important;
+  background-color: $color--secondary !important;
+  &:active {
+    background-color: $color--primary !important;
+  }
+}
+.swal2-cancel {
+  border-radius: 0 !important;
+}
+.swal2-deny {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  border: 1px solid $color--secondary !important;
+  color: $color--secondary !important;
+
+}

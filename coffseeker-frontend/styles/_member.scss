@@ -1,0 +1,368 @@
+// 10/10:記得有空要整理CSS的程式碼安排
+
+// 大標籤樣式變更
+.pr-defualt-height{
+  min-height: 100vh;
+}
+
+// checkBox自製樣式
+.check-input {
+  appearance: none;
+  width: 16px; 
+  height: 16px; 
+  border: 1px solid #ffffff00; 
+  &:checked {
+    background: url('https://cdn-icons-png.flaticon.com/512/3388/3388530.png') no-repeat top left / cover;
+
+  }
+}
+
+.background {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 235 226 / var(--tw-bg-opacity))
+}
+
+.bg-none{
+  background: none;
+}
+
+.sidebar {
+  // width: 100%;
+  height: 100vh;
+  // background:pink
+}
+
+// 麵包屑 Start
+.nav-breadcrumb {
+  --bs-breadcrumb-divider: '>';
+  .link {
+    color: $color--primary;
+    text-decoration: none;
+    &:hover {
+      color: $color--secondary;
+    }
+  }
+}
+
+// 麵包屑 End
+
+// sideBar Start
+
+.sidebar-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: $color--primary;
+  font-family: 'Noto Sans TC', sans-serif;
+  text-decoration: none;
+  &:hover {
+    color: $color--secondary;
+  }
+}
+// sideBar End
+
+// 表單 Start
+
+.form-title {
+  background: #e0e0e0;
+  font-weight: bold;
+  color: $color--primary;
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+// 表單input統規
+.form-box {
+  width: 650px;
+  font-family: 'Noto Sans TC', sans-serif;
+  input.form-control {
+    height: 60px;
+    border: black solid 1px;
+    background: none;
+  }
+  select.form-select {
+    height: 60px;
+    border: black solid 1px;
+    background-color: #ffffff00;
+  }
+  .form-control.disable{
+    border: 0;
+  }
+  // @media screen and (max-width: 768px) {
+  //   max-width: 650px;;
+  // }
+}
+// cursor: pointer;
+
+// 表格類的統規
+.table-box{
+    width: 100%;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+
+
+// 按鈕統規
+.btn-login {
+    color: #ffffff;
+    background: $color--secondary;
+    font-family: 'Noto Sans TC';
+    font-size: 18px;
+    height: 48px;
+    width:100% ;
+    
+}
+// 忘記密碼取得驗證碼按鈕
+.btn-getOTP {
+    color: #ffffff;
+    background: $color--secondary;
+    font-family: 'Noto Sans TC';
+    font-size: 18px;
+    height: 48px;
+    // width: 650px;
+}
+// 登入頁面 詢問註冊
+.ask-for-register {
+    font-size: 20px;
+    font-family: 'Noto Sans TC';
+    span {
+        color: #a7a7a7;
+    }
+    a {
+        color: $color--secondary;
+        text-decoration: none;
+    }
+}
+
+.forget-password {
+    font-size: 16px;
+    font-family: 'Noto Sans TC';
+    color: #a7a7a7;
+    text-decoration: none;
+}
+
+.birthday-selector {
+    visibility: hidden;
+}
+
+.allow-btn {
+  width: max-content;
+}
+.disagree {
+    cursor:not-allowed;
+    background: #a7a7a7;
+
+}
+
+.orange-text {
+    color: $color--secondary;
+}
+
+.ask-for-login{
+    width: 650px;
+    @media screen and (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        max-width:fit-content ;
+    }
+}
+
+.membership-button {
+    svg {
+        cursor: pointer;
+        &:hover {
+            color: $color--secondary;
+        }
+    }
+}
+
+.member-dropdown {
+    background: white;
+    left: -92px;
+    text-wrap: nowrap;
+    .dropdown-option {
+        a {
+            color: $color--primary;
+        }
+        &:hover {
+            background: $color--secondary;
+        }
+    }
+}
+
+.test-area{
+    background: pink;
+}
+
+
+
+
+// img{
+//     width: 100px;
+//     height: 100px;
+// }
+
+.check-change{
+    top: -200px;
+}
+
+// 合約swal
+.contract-popup{
+  font-size: 16px;
+  width: 700px;
+  height: fit-content;
+  background-color: rgb(240 235 226 / var(--tw-bg-opacity));
+  @media screen and (max-width: 768px){
+    overflow-y: scroll;
+    height:70vh;
+  }
+  
+}
+
+.contract{
+  background: #fff;
+  font-size: 16px;
+}
+
+// 訂單頁
+.order-close{
+  overflow: hidden;
+  transition:0.5s ease-in-out;
+}
+
+.order-open{
+  height: 36px;
+  background: none;
+  &:hover,
+  &.active{
+    color: #fff;
+      background: $color--secondary;
+  }
+  @media screen and (max-width: 768px) {
+    &:hover{
+      color: #1C262C;
+      background: none;
+    }
+    &.active{
+      color: #fff;
+        background: $color--secondary;
+    }
+  }
+}
+
+// 訂單頁的表格
+
+.order-state{
+  font-size: 16px;
+  .data{
+      font-size: 11px;
+  }
+  .gray{
+      background: $color--gray3;
+  }
+  .orange{
+      background: $color--secondary;
+  }
+}
+
+.order-nav{
+  div.text-center{
+    width: 103px;
+  }
+}
+
+.ed-select-control{
+  &.order-select{
+    width: 20%;
+    @media screen and (max-width: 768px){
+      width: 100%;
+    }
+  }
+} 
+
+.imgborder{
+  border: 5px solid #dfd0af;
+}
+
+.third-login{
+
+  svg{
+    cursor: pointer;
+  }
+}
+
+.eyes{
+  top:-56px;
+  right:30px;
+}
+
+// 優惠券
+.coupon-image{
+ width: 120px;
+ height: 120px;
+ background: $color--secondary;
+ @media screen and (max-width: 768px){
+  width: 100px;
+  height: 100px;
+}
+ .ticket{
+  color: #fff;
+  font-size: 75px;
+  @media screen and (max-width: 768px){
+    font-size: 50px;
+  }
+ }
+}
+.coupon-border{
+  width: calc(100% - 130px);
+  height: 120px;
+  @media screen and (max-width: 768px){
+    width: calc(100% - 110px);
+    height: 100px;
+  }
+  img{
+    z-index: -1;
+    width: 100%;
+    height: 120px;
+    @media screen and (max-width: 768px){
+      height: 100px;
+    }
+  }
+  .coupon-content{
+    height: 120px;
+    @media screen and (max-width: 768px){
+      height: 100px;
+    }
+    .link{
+      background: $color--secondary;
+      color: #fff;
+      cursor: pointer;
+    }
+    .expire{
+      font-size: 11.8px;
+    }
+    .title{
+      font-weight: 700;
+      color: $color--primary;
+    }
+    .discount{
+      color: $color--primary;
+
+    }
+  }
+}
+.order-loading-cover{
+  border: 1px solid black;
+  position: absolute;
+  height: 70vh;
+  background-color: #F0EBE2;
+}
+
+.order-loading{
+  
+  left: calc(50% - 70px);
+  top: calc(50% - 70px);
+}
+
+.coupon-loading{
+  height: 75vh;
+}

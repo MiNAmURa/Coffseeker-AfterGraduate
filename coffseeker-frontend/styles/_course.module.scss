@@ -1,0 +1,62 @@
+
+$color--secondary: rgb(181 75 51);
+$color--card-background:#CBB48B;
+$color--primary: #1c262c;
+$color--background: #f2f2f2;
+$color--hover: #364047;
+
+
+
+
+//---------------------Card
+.course-li {
+    list-style: none; 
+    margin: 0; 
+    padding: 0;
+  }
+
+.img-bg{
+    background-color: $color--card-background;
+}
+.price{
+    color:$color--secondary
+  }
+
+
+
+  
+  .hw-review-title{
+    margin-top: 80px;
+  }
+
+
+  //-------------------SideBar
+
+
+
+  //-------------------btn
+  .btn-add{
+    background-color: $color--secondary;
+  }
+
+  .btn-check{
+    background-color: $color--primary;
+  }
+
+  
+    .active{
+      outline: $color--hover;
+      background-color: $color--primary;
+      color:white;
+    }
+  
+
+ .course-intro{
+  li{
+    list-style-type: disc;
+ }
+}
+
+.card {
+  width: 288px;
+}

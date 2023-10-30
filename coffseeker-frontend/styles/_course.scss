@@ -1,0 +1,27 @@
+.hw-bold-text{
+    font-weight: bold;
+    color:#1c262c
+}
+
+.hw-fav-btn{
+    $_: &;
+  background: #dfd0af;
+  border: none;
+
+  position: relative;
+  top: 0;
+  right: 0;
+  clip-path: polygon(100% 100%, 0% 0%, 100% 0%);
+
+
+}
+
+.hw-course-detail{
+  text-align: left;
+  @media screen and (max-width: $sm) {
+    text-align: center;
+  }
+   
+  }
+  
+ 
