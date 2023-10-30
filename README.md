@@ -2,7 +2,7 @@
 
 您好！
 
-此為我在資展國際的學程中與小組共同完成之期末專題
+此為我在資展國際的學程中的6人小組共同完成之期末專題
 
 企劃書：https://docs.google.com/presentation/d/1Hp83zj3mIZ1ZkqcBvtAvwh-ieWKb310XrsM5Di-LGSo/edit?usp=sharing
 
@@ -16,16 +16,14 @@
     - 企劃書撰寫：網站視覺規劃、會員相關頁面介紹、企劃書規格統整、封面製作。  
     - 視覺設計：Logo設計（使用Adobe Illustrator製作）、讀取動畫製作（使用Lottie技術製作）。  
 
-前端使用React / Next.js專案結構開發  
-    負責的檔案如下：  
+前端使用React / Next.js專案結構開發，負責的檔案如下：  
         - @/pages/member/*  
         - @/components/member/*  
         - @/context/userInfo.js  
         - @/styles/_member.scss  
 
 
-後端使用Node.js / Express專案結構開發  
-    負責的檔案如下：  
+後端使用Node.js / Express專案結構開發，負責的檔案如下：  
          - @/routes/users.js  
          - @/routes/order.js  
          - @/models/users.js  
