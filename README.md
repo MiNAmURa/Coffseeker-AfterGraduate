@@ -1,3 +1,10 @@
+本專案使用技術及版本號
+前端：
+    React v18.2.0 / Next v13.4.2
+
+後端：
+    node.js v18.17.1 / Express v4.18.2
+
 2023/10/30
 
 您好！
@@ -28,7 +35,6 @@
          - @/routes/order.js  
          - @/models/users.js  
          - @/models/order.js  
-
 
 
 
